@@ -1,5 +1,7 @@
 import express from "express";
 import cors from "cors"
+import db from "./db/models/product.js";
+
 
 const server = express();
 
@@ -8,8 +10,8 @@ const PORT = process.env.PORT;
 server.use(cors());
 
 server.use(express.json());
-server.use("/category", categoryRoutes);
-server.use("/products", productsRoutes);
+// server.use("/category", categoryRoutes);
+// server.use("/products", products);
 
 db.sequelize
 
